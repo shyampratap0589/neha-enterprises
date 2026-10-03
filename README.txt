@@ -1,11 +1,13 @@
-NEHA ENTERPRISES — EXPANDED PNEUMATICS CATALOGUE
+NEHA ENTERPRISES — IMAGE FIXED CATALOGUE
 
-Catalogue contains 141 product listings across pneumatic tools, compressors, air preparation, valves, cylinders, automation components, fittings, hoses, gauges, accessories and compressor spares.
+This version fixes the broken image links for all 141 catalogue products by embedding each product-type illustration directly into index.html. No separate images folder or external image hosting is required.
 
-INSTALL:
+To update GitHub Pages:
 1. Extract this ZIP.
-2. In your GitHub repository, upload and replace index.html in the repository root.
-3. Commit changes.
-4. Refresh your GitHub Pages site with Ctrl+F5.
+2. Open the neha-enterprises GitHub repository.
+3. Add file -> Upload files.
+4. Upload and replace index.html from this folder.
+5. Commit changes.
+6. Open your GitHub Pages URL and press Ctrl+F5.
 
-Product images are embedded SVG illustrations matched to product types; they are not official manufacturer photographs. Brands, prices, exact specifications and stock must be confirmed with Neha Enterprises before publishing. Some items are model-specific and listed as price on request.
+Images are product-type illustrations, not official manufacturer photographs. Confirm brands, model, stock and prices before taking orders.
