@@ -30,11 +30,11 @@ const PRODUCTS_DATA = [
     ],
     variantsLabel: "Select Motor Power & Tank Capacity:",
     variants: [
-      { name: "3 HP Motor • 150L Tank (12 CFM)", code: "NE-AC-3HP-150L", price: 29500 },
-      { name: "5 HP Motor • 220L Tank (18 CFM)", code: "NE-AC-5HP-220L", price: 38500, selected: true },
-      { name: "7.5 HP Motor • 300L Tank (26 CFM)", code: "NE-AC-7.5HP-300L", price: 52000 },
-      { name: "10 HP Motor • 500L Tank (38 CFM)", code: "NE-AC-10HP-500L", price: 68000 },
-      { name: "15 HP Two-Stage • 500L Tank (52 CFM)", code: "NE-AC-15HP-500L", price: 92000 }
+      { name: "3 HP Motor • 150L Tank (12 CFM)", code: "NE-AC-3HP-150L", price: 32000 },
+      { name: "5 HP Motor • 220L Tank (18 CFM)", code: "NE-AC-5HP-220L", price: 40000, selected: true },
+      { name: "7.5 HP Motor • 300L Tank (26 CFM)", code: "NE-AC-7.5HP-300L", price: 60000 },
+      { name: "10 HP Motor • 500L Tank (38 CFM)", code: "NE-AC-10HP-500L", price: 75000 },
+      { name: "15 HP Two-Stage • 500L Tank (52 CFM)", code: "NE-AC-15HP-500L", price: 110000 }
     ],
     specifications: {
       "Motor Rating": "3 HP to 15 HP (3-Phase 415V / Single-Phase 220V)",
