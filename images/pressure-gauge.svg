@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+    <linearGradient id="ss-bezel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="25%" stop-color="#cbd5e1" />
+      <stop offset="50%" stop-color="#94a3b8" />
+      <stop offset="75%" stop-color="#e2e8f0" />
+      <stop offset="100%" stop-color="#64748b" />
+    </linearGradient>
+    <linearGradient id="brass-stem" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#854d0e" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="18" stdDeviation="15" flood-color="#0f172a" flood-opacity="0.22" />
+    </filter>
+  </defs>
+
+  <rect width="600" height="600" fill="url(#bg)" rx="16" />
+  <circle cx="300" cy="300" r="220" fill="#ffffff" opacity="0.6" />
+
+  <g transform="translate(140, 70)" filter="url(#shadow)">
+    <!-- Bottom Brass Stem Mount -->
+    <rect x="135" y="310" width="50" height="65" rx="3" fill="url(#brass-stem)" stroke="#713f12" stroke-width="2" />
+    <line x1="135" y1="330" x2="185" y2="330" stroke="#713f12" stroke-width="2" />
+    <line x1="135" y1="345" x2="185" y2="345" stroke="#713f12" stroke-width="2" />
+    <line x1="135" y1="360" x2="185" y2="360" stroke="#713f12" stroke-width="2" />
+
+    <!-- Outer Stainless Steel Bezel Ring -->
+    <circle cx="160" cy="160" r="160" fill="url(#ss-bezel)" stroke="#475569" stroke-width="3" />
+    <!-- Inner Dark Bezel Rim -->
+    <circle cx="160" cy="160" r="148" fill="#1e293b" />
+    <!-- White Acrylic Dial Face -->
+    <circle cx="160" cy="160" r="142" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+
+    <!-- Outer PSI Scale (Red Numbers 0 to 150) -->
+    <!-- Inner BAR Scale (Black Numbers 0 to 10) -->
+    <circle cx="160" cy="160" r="110" fill="none" stroke="#0f172a" stroke-width="2" stroke-dasharray="3 7" />
+    
+    <!-- Dial Numbers -->
+    <text x="80" y="235" fill="#0f172a" font-family="sans-serif" font-size="14" font-weight="bold">0</text>
+    <text x="70" y="165" fill="#0f172a" font-family="sans-serif" font-size="14" font-weight="bold">2</text>
+    <text x="100" y="105" fill="#0f172a" font-family="sans-serif" font-size="14" font-weight="bold">4</text>
+    <text x="155" y="80" fill="#0f172a" font-family="sans-serif" font-size="14" font-weight="bold">6</text>
+    <text x="215" y="105" fill="#0f172a" font-family="sans-serif" font-size="14" font-weight="bold">8</text>
+    <text x="245" y="165" fill="#0f172a" font-family="sans-serif" font-size="14" font-weight="bold">10</text>
+
+    <!-- Scale Units Label -->
+    <text x="160" y="125" fill="#0284c7" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">bar</text>
+    <text x="160" y="140" fill="#ef4444" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">psi x 10</text>
+
+    <!-- Company Branding in Center -->
+    <text x="160" y="210" fill="#0f172a" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">NEHA ENTERPRISES</text>
+    <text x="160" y="222" fill="#64748b" font-family="sans-serif" font-size="8" text-anchor="middle">CLASS 2.5 ACCURACY</text>
+
+    <!-- Red Indicator Needle pointing to ~6 Bar -->
+    <line x1="160" y1="160" x2="160" y2="70" stroke="#ef4444" stroke-width="3" stroke-linecap="round" />
+    <!-- Center Pivot Cap -->
+    <circle cx="160" cy="160" r="10" fill="#0f172a" stroke="#cbd5e1" stroke-width="2" />
+  </g>
+
+  <g transform="translate(30, 520)">
+    <text x="0" y="0" fill="#0f172a" font-family="sans-serif" font-size="14" font-weight="bold">0-10 BAR (0-150 PSI) PRESSURE GAUGE</text>
+    <text x="0" y="20" fill="#64748b" font-family="monospace" font-size="12">Stainless Steel Case • Brass 1/4" BSP Mount • Bourdon Tube</text>
+  </g>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+    <linearGradient id="white-tank" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#e2e8f0" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+    <linearGradient id="oilfree-motor" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#64748b" />
+      <stop offset="50%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#0f172a" flood-opacity="0.2" />
+    </filter>
+  </defs>
+
+  <rect width="600" height="600" fill="url(#bg)" rx="16" />
+  <circle cx="300" cy="300" r="225" fill="#ffffff" opacity="0.6" />
+
+  <g transform="translate(100, 90)" filter="url(#shadow)">
+    <!-- Base Rubber Feet & Wheels -->
+    <circle cx="80" cy="370" r="24" fill="#0f172a" stroke="#475569" stroke-width="3" />
+    <circle cx="80" cy="370" r="10" fill="#94a3b8" />
+    <circle cx="320" cy="370" r="24" fill="#0f172a" stroke="#475569" stroke-width="3" />
+    <circle cx="320" cy="370" r="10" fill="#94a3b8" />
+    <rect x="180" y="360" width="40" height="20" rx="4" fill="#1e293b" />
+
+    <!-- Clean White Epoxy Coated Air Tank (50L / 100L) -->
+    <rect x="40" y="240" width="320" height="110" rx="55" fill="url(#white-tank)" stroke="#94a3b8" stroke-width="2.5" />
+    
+    <!-- Tank Cleanliness Badge -->
+    <rect x="100" y="275" width="200" height="40" rx="6" fill="#0284c7" />
+    <text x="200" y="293" fill="#ffffff" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">OIL-FREE SILENT COMPRESSOR</text>
+    <text x="200" y="306" fill="#fef08a" font-family="monospace" font-size="9" text-anchor="middle">58 dB ULTRA QUIET • 50L</text>
+
+    <!-- Twin Direct-Drive Pure Copper Oil-Free Motor Heads -->
+    <!-- Motor Head 1 (Left) -->
+    <rect x="80" y="110" width="105" height="115" rx="10" fill="url(#oilfree-motor)" stroke="#0f172a" stroke-width="2" />
+    <rect x="65" y="130" width="20" height="75" rx="6" fill="#475569" />
+    <rect x="180" y="130" width="20" height="75" rx="6" fill="#475569" />
+    <!-- Intake Silencers -->
+    <circle cx="132" cy="90" r="16" fill="#0284c7" stroke="#0369a1" />
+    <text x="132" y="94" fill="#ffffff" font-size="9" font-weight="bold" text-anchor="middle">AIR</text>
+
+    <!-- Motor Head 2 (Right) -->
+    <rect x="220" y="110" width="105" height="115" rx="10" fill="url(#oilfree-motor)" stroke="#0f172a" stroke-width="2" />
+    <rect x="205" y="130" width="20" height="75" rx="6" fill="#475569" />
+    <rect x="320" y="130" width="20" height="75" rx="6" fill="#475569" />
+    <!-- Intake Silencers -->
+    <circle cx="272" cy="90" r="16" fill="#0284c7" stroke="#0369a1" />
+    <text x="272" y="94" fill="#ffffff" font-size="9" font-weight="bold" text-anchor="middle">AIR</text>
+
+    <!-- Chrome Air Manifold Pipes Connecting to Tank -->
+    <path d="M 132,225 L 132,240" stroke="#0284c7" stroke-width="6" />
+    <path d="M 272,225 L 272,240" stroke="#0284c7" stroke-width="6" />
+
+    <!-- Pressure Gauge & Solenoid Unloader Valve -->
+    <circle cx="340" cy="210" r="18" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
+    <line x1="340" y1="210" x2="350" y2="202" stroke="#ef4444" stroke-width="2" />
+    <rect x="345" y="230" width="30" height="15" fill="#eab308" stroke="#854d0e" />
+  </g>
+
+  <g transform="translate(30, 520)">
+    <text x="0" y="0" fill="#0f172a" font-family="sans-serif" font-size="14" font-weight="bold">OIL-FREE ULTRA-SILENT AIR COMPRESSOR</text>
+    <text x="0" y="20" fill="#64748b" font-family="monospace" font-size="12">1 HP to 3 HP • 58 dB Low Noise • 100% Clean Air for Labs & Clinics</text>
+  </g>
+</svg>

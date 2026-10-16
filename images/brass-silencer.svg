@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+    <linearGradient id="bronze" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fde047" />
+      <stop offset="35%" stop-color="#ca8a04" />
+      <stop offset="70%" stop-color="#a16207" />
+      <stop offset="100%" stop-color="#713f12" />
+    </linearGradient>
+    <linearGradient id="brass-hex" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#854d0e" />
+    </linearGradient>
+    <pattern id="sintered-pattern" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#713f12" opacity="0.4" />
+      <circle cx="6" cy="6" r="1.5" fill="#713f12" opacity="0.4" />
+    </pattern>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#0f172a" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <rect width="600" height="600" fill="url(#bg)" rx="16" />
+  <circle cx="300" cy="300" r="215" fill="#ffffff" opacity="0.6" />
+
+  <!-- Center: Large Cone Sintered Bronze Muffler (BSL-02 1/4") -->
+  <g transform="translate(190, 80)" filter="url(#shadow)">
+    <!-- Porous Sintered Bronze Cone Filter Cap -->
+    <path d="M 60,60 C 60,40 160,40 160,60 L 180,180 L 40,180 Z" fill="url(#bronze)" stroke="#854d0e" stroke-width="2" />
+    <path d="M 60,60 C 60,40 160,40 160,60 L 180,180 L 40,180 Z" fill="url(#sintered-pattern)" />
+
+    <!-- Hex Nut Brass Base -->
+    <path d="M 30,180 L 190,180 L 180,240 L 40,240 Z" fill="url(#brass-hex)" stroke="#713f12" stroke-width="2" />
+    <line x1="75" y1="180" x2="70" y2="240" stroke="#713f12" stroke-width="2" />
+    <line x1="145" y1="180" x2="150" y2="240" stroke="#713f12" stroke-width="2" />
+
+    <!-- Male BSP Thread Base -->
+    <rect x="55" y="240" width="110" height="70" rx="3" fill="url(#brass-hex)" stroke="#713f12" stroke-width="2" />
+    <line x1="55" y1="255" x2="165" y2="255" stroke="#713f12" stroke-width="2" />
+    <line x1="55" y1="270" x2="165" y2="270" stroke="#713f12" stroke-width="2" />
+    <line x1="55" y1="285" x2="165" y2="285" stroke="#713f12" stroke-width="2" />
+    <line x1="55" y1="300" x2="165" y2="300" stroke="#713f12" stroke-width="2" />
+
+    <!-- Hollow Bottom Air Hole -->
+    <ellipse cx="110" cy="310" rx="35" ry="12" fill="#451a03" />
+  </g>
+
+  <!-- Left: Small Flat Breather Silencer (BESL-01) -->
+  <g transform="translate(70, 260)" filter="url(#shadow)">
+    <rect x="20" y="30" width="70" height="30" rx="6" fill="url(#bronze)" stroke="#854d0e" />
+    <path d="M 10,60 L 100,60 L 95,85 L 15,85 Z" fill="url(#brass-hex)" stroke="#713f12" />
+    <rect x="25" y="85" width="60" height="40" fill="url(#brass-hex)" stroke="#713f12" />
+  </g>
+
+  <g transform="translate(30, 520)">
+    <text x="0" y="0" fill="#0f172a" font-family="sans-serif" font-size="14" font-weight="bold">SINTERED BRONZE PNEUMATIC SILENCERS</text>
+    <text x="0" y="20" fill="#64748b" font-family="monospace" font-size="12">Reduces Exhaust Noise by 30dB • Stops Dust Ingress into Valves</text>
+  </g>
+</svg>

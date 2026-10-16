@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+    <linearGradient id="metal-manifold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#64748b" />
+    </linearGradient>
+    <linearGradient id="clear-bowl" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#bae6fd" stop-opacity="0.75" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#0f172a" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <rect width="600" height="600" fill="url(#bg)" rx="16" />
+  <circle cx="300" cy="300" r="215" fill="#ffffff" opacity="0.6" />
+
+  <g transform="translate(90, 80)" filter="url(#shadow)">
+    <!-- Top Regulator Adjustment Knob -->
+    <rect x="175" y="10" width="70" height="45" rx="6" fill="#0f172a" stroke="#334155" stroke-width="2" />
+    <line x1="190" y1="10" x2="190" y2="55" stroke="#475569" stroke-width="2" />
+    <line x1="210" y1="10" x2="210" y2="55" stroke="#475569" stroke-width="2" />
+    <line x1="230" y1="10" x2="230" y2="55" stroke="#475569" stroke-width="2" />
+    
+    <!-- Central Metal Manifold Body -->
+    <rect x="40" y="55" width="340" height="70" rx="10" fill="url(#metal-manifold)" stroke="#475569" stroke-width="2" />
+
+    <!-- Round Analogue Pressure Gauge in Center -->
+    <circle cx="210" cy="90" r="42" fill="#ffffff" stroke="#0f172a" stroke-width="3" />
+    <!-- Gauge Dial Markings -->
+    <circle cx="210" cy="90" r="34" fill="none" stroke="#e2e8f0" stroke-width="2" />
+    <line x1="210" y1="90" x2="228" y2="72" stroke="#ef4444" stroke-width="2.5" />
+    <circle cx="210" cy="90" r="4" fill="#0f172a" />
+    <text x="210" y="112" fill="#0284c7" font-family="monospace" font-size="8" font-weight="bold" text-anchor="middle">0-10 BAR</text>
+
+    <!-- Air Inlet (Left) and Outlet (Right) Ports -->
+    <rect x="15" y="70" width="25" height="40" rx="4" fill="#eab308" stroke="#854d0e" stroke-width="1.5" />
+    <rect x="380" y="70" width="25" height="40" rx="4" fill="#eab308" stroke="#854d0e" stroke-width="1.5" />
+
+    <!-- Left Bowl: Filter & Water Trap with Metal Guard -->
+    <rect x="65" y="125" width="110" height="190" rx="14" fill="url(#clear-bowl)" stroke="#0284c7" stroke-width="1.5" />
+    <!-- Steel Guard Ribs -->
+    <rect x="80" y="145" width="80" height="145" rx="6" fill="none" stroke="#475569" stroke-width="2.5" />
+    <line x1="120" y1="145" x2="120" y2="290" stroke="#475569" stroke-width="2" />
+    <!-- Sintered Filter Element inside -->
+    <rect x="95" y="140" width="50" height="90" rx="4" fill="#fde047" opacity="0.6" stroke="#ca8a04" />
+    <!-- Bottom Drain Valve -->
+    <rect x="110" y="315" width="20" height="25" rx="3" fill="#334155" />
+
+    <!-- Right Bowl: Micro-Fog Oil Mist Lubricator -->
+    <rect x="245" y="125" width="110" height="190" rx="14" fill="url(#clear-bowl)" stroke="#0284c7" stroke-width="1.5" />
+    <!-- Steel Guard Ribs -->
+    <rect x="260" y="145" width="80" height="145" rx="6" fill="none" stroke="#475569" stroke-width="2.5" />
+    <line x1="300" y1="145" x2="300" y2="290" stroke="#475569" stroke-width="2" />
+    <!-- Oil Drip Tube inside -->
+    <line x1="300" y1="130" x2="300" y2="240" stroke="#0284c7" stroke-width="3" />
+    <!-- Bottom Plug -->
+    <rect x="290" y="315" width="20" height="25" rx="3" fill="#334155" />
+
+    <!-- Top Oil Sight Glass & Drip Regulator Screw -->
+    <rect x="288" y="35" width="24" height="20" rx="3" fill="#38bdf8" stroke="#0369a1" />
+  </g>
+
+  <g transform="translate(30, 520)">
+    <text x="0" y="0" fill="#0f172a" font-family="sans-serif" font-size="14" font-weight="bold">F.R.L. AIR PREPARATION SYSTEM (3-IN-1)</text>
+    <text x="0" y="20" fill="#64748b" font-family="monospace" font-size="12">AC3000 • Filter 5μm + Pressure Regulator + Lubricator</text>
+  </g>
+</svg>

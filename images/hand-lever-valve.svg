@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#64748b" />
+    </linearGradient>
+    <linearGradient id="knob" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="60%" stop-color="#b91c1c" />
+      <stop offset="100%" stop-color="#7f1d1d" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#0f172a" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <rect width="600" height="600" fill="url(#bg)" rx="16" />
+  <circle cx="300" cy="300" r="215" fill="#ffffff" opacity="0.6" />
+
+  <g transform="translate(140, 70)" filter="url(#shadow)">
+    <!-- Lever Handle Arm & Red Knob -->
+    <circle cx="210" cy="40" r="26" fill="url(#knob)" stroke="#7f1d1d" stroke-width="2" />
+    <path d="M 195,55 L 120,180 L 140,185 L 215,60 Z" fill="#334155" stroke="#1e293b" stroke-width="1.5" />
+
+    <!-- Lever Pivot Housing -->
+    <rect x="90" y="150" width="80" height="45" rx="8" fill="#475569" stroke="#1e293b" stroke-width="2" />
+    <circle cx="130" cy="172" r="12" fill="#94a3b8" />
+    <circle cx="130" cy="172" r="6" fill="#0f172a" />
+
+    <!-- Main Aluminum 5/2 Valve Body -->
+    <rect x="50" y="190" width="220" height="150" rx="12" fill="url(#body)" stroke="#475569" stroke-width="2.5" />
+    
+    <!-- Ports -->
+    <circle cx="105" cy="235" r="14" fill="#eab308" stroke="#854d0e" stroke-width="2" />
+    <circle cx="105" cy="235" r="8" fill="#713f12" />
+    <text x="105" y="270" fill="#0f172a" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">A</text>
+
+    <circle cx="215" cy="235" r="14" fill="#eab308" stroke="#854d0e" stroke-width="2" />
+    <circle cx="215" cy="235" r="8" fill="#713f12" />
+    <text x="215" y="270" fill="#0f172a" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">B</text>
+
+    <!-- Nameplate -->
+    <rect x="75" y="285" width="170" height="36" rx="4" fill="#0f172a" />
+    <text x="160" y="303" fill="#ffffff" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">4H210-08 MANUAL</text>
+    <text x="160" y="315" fill="#38bdf8" font-family="monospace" font-size="9" text-anchor="middle">5/2 WAY HAND LEVER</text>
+  </g>
+
+  <g transform="translate(30, 520)">
+    <text x="0" y="0" fill="#0f172a" font-family="sans-serif" font-size="14" font-weight="bold">MANUAL ROTARY HAND LEVER VALVE</text>
+    <text x="0" y="20" fill="#64748b" font-family="monospace" font-size="12">4H210-08 Series • Rugged Manual Directional Control</text>
+  </g>
+</svg>
