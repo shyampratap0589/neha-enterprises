@@ -1,109 +1,857 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Neha Enterprises | Pneumatic Products</title>
-<style>
-:root{--navy:#071b35;--blue:#1768d3;--pale:#eaf2ff;--ink:#12243b;--muted:#718096}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:var(--ink);background:#f5f8fc}header{background:var(--navy);color:white;padding:18px max(5%,calc((100% - 1180px)/2));display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}header b{font-size:22px;letter-spacing:1.5px}header small{display:block;color:#9bb4d1;font-size:10px;letter-spacing:2px;margin-top:5px}.wrap{max-width:1180px;margin:auto;padding:0 22px}.hero{background:linear-gradient(120deg,#071b35,#104577);color:white;padding:60px 0}.hero h1{font-size:clamp(36px,5vw,58px);margin:10px 0 18px;letter-spacing:-1.5px}.hero em{color:#51c7e8;font-style:normal}.hero p{color:#c2d2e3;line-height:1.7;max-width:620px}.btn{display:inline-block;background:var(--blue);color:white;padding:13px 17px;border:0;border-radius:6px;font-weight:bold;cursor:pointer;text-decoration:none;margin-top:10px}.brands{background:white;padding:20px;text-align:center;color:#42566e;font-weight:bold;letter-spacing:1.5px;line-height:2}.section{padding:50px 0}.head{display:flex;justify-content:space-between;gap:25px;align-items:end;flex-wrap:wrap}.head h2{font-size:34px;margin:8px 0}.head p{max-width:480px;color:#697b90;line-height:1.7;font-size:14px}.eyebrow{font-size:11px;letter-spacing:2px;color:var(--blue);font-weight:bold}.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:25px 0}.cat{background:white;border:1px solid #dce5ef;border-radius:9px;padding:18px;text-align:left;cursor:pointer;color:var(--ink)}.cat:hover,.cat.active{border-color:var(--blue);box-shadow:0 8px 24px #10274412}.symbol{font-size:25px;color:var(--blue)}.cat strong{display:block;font-size:15px;margin:12px 0 7px}.cat small{color:var(--muted);line-height:1.4;display:block;min-height:32px}.cat span:last-child{display:block;color:var(--blue);font-size:11px;font-weight:bold;margin-top:13px}.tools{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:24px 0}.filters{display:flex;gap:7px;flex-wrap:wrap}.filters button{padding:10px 12px;border:1px solid #dce5ef;border-radius:5px;background:white;cursor:pointer;color:#4b6077}.filters button.active{background:var(--navy);color:white}.tools input{padding:11px 13px;border:1px solid #dce5ef;border-radius:5px;min-width:230px}.count{font-size:12px;color:var(--muted);margin:-8px 0 14px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{background:white;border:1px solid #e0e8f1;border-radius:9px;overflow:hidden}.photo{height:150px;background:#e5eef7;display:grid;place-items:center;padding:7px}.photo img{display:block;width:100%;height:100%;object-fit:contain}.info{padding:14px}.brand{font-size:10px;letter-spacing:.7px;color:var(--blue);font-weight:bold}.info h3{font-size:14px;line-height:1.4;margin:8px 0}.info p{font-size:12px;color:var(--muted);line-height:1.5;min-height:36px}.bottom{border-top:1px solid #edf1f6;padding-top:11px;margin-top:10px;display:flex;flex-direction:column;gap:9px}.price{font-weight:bold;font-size:13px}.price small{display:block;font-weight:normal;color:#8795a6;font-size:10px;margin-top:4px}.bottom button{background:var(--pale);color:#145ec0;border:0;border-radius:5px;padding:10px;cursor:pointer;font-weight:bold}.note{background:#eaf1fa;padding:15px;border-radius:6px;color:#52667d;font-size:12px;margin-top:22px}.contact{background:#0b2d50;color:white;padding:45px 0}.contact p{color:#c1d0e0;line-height:1.8}.contact a{color:#8bdaf1}footer{padding:20px;text-align:center;background:#041327;color:#9cb0c5;font-size:12px}
-.detail-view{display:none;position:fixed;inset:0;z-index:9999;background:#f5f8fc;overflow-y:auto}
-.detail-view.open{display:block}
-.detail-top{position:sticky;top:0;z-index:2;background:#071b35;color:#fff;padding:14px max(5%,calc((100% - 1050px)/2));display:flex;justify-content:space-between;align-items:center;gap:15px}
-.detail-top button{background:#fff;color:#071b35;border:0;border-radius:5px;padding:10px 14px;font-weight:bold;cursor:pointer}
-.detail-content{max-width:1050px;margin:26px auto;padding:0 22px 50px}
-.detail-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;background:#fff;border:1px solid #dfe8f2;border-radius:12px;padding:24px}
-.detail-image{background:#e5eef7;border-radius:9px;min-height:330px;display:grid;place-items:center;padding:15px}
-.detail-image img{width:100%;height:100%;max-height:380px;object-fit:contain}
-.detail-info{padding:8px 0}
-.detail-info h1{font-size:32px;line-height:1.2;margin:10px 0 15px}
-.detail-info .detail-price{font-size:23px;font-weight:bold;margin:20px 0 5px;color:#0c3763}
-.detail-info .detail-muted{font-size:12px;color:#75869a}
-.detail-info p{line-height:1.75;color:#596d82}
-.detail-info ul{padding-left:20px;color:#425970;line-height:1.9}
-.detail-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
-.detail-actions .btn{margin:0}
-.detail-actions .back-btn{background:#eaf1fa;color:#174d85}
-@media(max-width:700px){.detail-panel{grid-template-columns:1fr;padding:14px;gap:16px}.detail-image{min-height:220px}.detail-info h1{font-size:26px}.detail-content{margin:14px auto;padding:0 12px 30px}}
-@media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}.categories{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.categories{grid-template-columns:1fr 1fr}.photo{height:110px}.info{padding:10px}.info h3{font-size:12px}.info p{font-size:11px}.tools input{width:100%;min-width:0}.hero{padding:42px 0}.head h2{font-size:29px}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neha Enterprises | Industrial Pneumatics & Precision Air Tools (Since 2006)</title>
+  <meta name="description" content="Neha Enterprises - Trusted supplier of industrial pneumatic cylinders, solenoid valves, FRL units, air tools, and push-in fittings. Serving manufacturing and automation since 2006." />
+  <meta name="keywords" content="Neha Enterprises, pneumatics, pneumatic cylinders, solenoid valves, FRL air filter regulator, air impact wrench, pneumatic die grinder, push in fittings, PU tubing" />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
 
-.cart-trigger{background:#fff;color:#071b35;border:0;border-radius:6px;padding:11px 14px;font-weight:bold;cursor:pointer}
-.cart-badge{display:inline-flex;align-items:center;justify-content:center;background:#1768d3;color:#fff;border-radius:20px;min-width:22px;height:22px;margin-left:6px;font-size:12px}
-.cart-view{display:none;position:fixed;inset:0;z-index:10001;background:rgba(4,19,39,.65);align-items:flex-start;justify-content:flex-end}
-.cart-view.open{display:flex}
-.cart-panel{background:#fff;width:min(520px,100%);height:100%;overflow:auto;padding:24px;box-shadow:-12px 0 35px #00152a30}
-.cart-head{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #e2eaf3;padding-bottom:14px}
-.cart-head h2{margin:0}.cart-head button,.qty button,.remove-item{cursor:pointer;border:0;border-radius:5px;padding:8px 11px}
-.cart-item{display:grid;grid-template-columns:1fr auto;gap:10px;padding:16px 0;border-bottom:1px solid #edf1f6}
-.cart-item small{display:block;color:#718096;margin-top:5px}
-.qty{display:flex;align-items:center;gap:9px;margin-top:10px}
-.qty button{background:#eaf2ff;color:#174d85}
-.cart-total{display:flex;justify-content:space-between;font-weight:bold;font-size:18px;padding:20px 0}
-.cart-actions{display:grid;gap:9px}.cart-actions button{width:100%;margin:0}
-.detail-actions .add-cart{background:#eaf2ff;color:#145ec0}
-@media(max-width:700px){.cart-panel{padding:18px}}
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <span class="top-bar-badge">★ Serving Since 2006</span>
+        <span>18+ Years of Industrial Trust & Automation Excellence</span>
+      </div>
+      <div class="top-bar-contact">
+        <a href="tel:8890034736" class="top-bar-link">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <strong>+91 8890034736</strong>
+        </a>
+        <a href="mailto:shyampratap0589@gmail.com" class="top-bar-link">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span>shyampratap0589@gmail.com</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
-</style></head><body>
-<header><div><b><span style="display:inline-grid;place-items:center;width:30px;height:30px;margin-right:9px;border-radius:7px;background:#2e91d0;color:#fff;font-size:17px;vertical-align:middle">N</span>NEHA ENTERPRISES</b><small>PNEUMATIC SOLUTIONS · SINCE 2007</small></div><div>Jaipur, Rajasthan · <a style="color:white" href="tel:8890034736">88900 34736</a></div><button class="cart-trigger" onclick="openCart()">🛒 Cart <span class="cart-badge" id="cartCount">0</span></button></header>
-<section class="hero"><div class="wrap"><div class="eyebrow" style="color:#8bdaf1">YOUR INDUSTRIAL AIR PARTNER</div><h1>Tools, compressors<br>& <em>pneumatic solutions.</em></h1><p>Browse pneumatic tools, air compressors, automation components, air-line accessories and workshop equipment from Neha Enterprises, Jaipur.</p><a class="btn" href="#products">Explore product catalogue ↓</a></div></section>
-<div class="brands">BRANDS: CP / CHICAGO PNEUMATIC · ELGi · IR / INGERSOLL RAND · ESAR · BLUE POINT · KIRLOSKAR</div>
-<section class="section" id="products"><div class="wrap"><div class="head"><div><div class="eyebrow">PRODUCT CATALOGUE</div><h2>Explore products by category</h2></div><p>Choose a category to view multiple products, or search by name or brand. Prices are indicative examples; confirm exact model, stock and price with us.</p></div>
-<div class="categories"><button class="cat" onclick="pick('Tools',this)"><span class="symbol">⚒</span><strong>Pneumatic Tools</strong><small>Impact wrenches, grinders, drills, sanders and more</small><span>Explore tools ↗</span></button><button class="cat" onclick="pick('Air',this)"><span class="symbol">◉</span><strong>Air Compressors</strong><small>Portable, reciprocating, screw and high-pressure</small><span>Explore compressors ↗</span></button><button class="cat" onclick="pick('Components',this)"><span class="symbol">⛭</span><strong>Pneumatic Components</strong><small>Cylinders, valves, FRL, fittings and tubing</small><span>Explore components ↗</span></button><button class="cat" onclick="pick('Accessories',this)"><span class="symbol">⌁</span><strong>Air-line & Workshop</strong><small>Hoses, couplers, gauges, reels and accessories</small><span>Explore accessories ↗</span></button></div>
-<div class="tools"><div class="filters"><button class="active" data-cat="All" onclick="filter('All',this)">All products</button><button data-cat="Tools" onclick="filter('Tools',this)">Pneumatic tools</button><button data-cat="Air" onclick="filter('Air',this)">Compressors</button><button data-cat="Components" onclick="filter('Components',this)">Components</button><button data-cat="Accessories" onclick="filter('Accessories',this)">Accessories</button></div><input id="search" placeholder="Search product or brand..." oninput="render()"></div>
-<div id="count" class="count"></div><div class="grid" id="grid"></div><div class="note">These are product-type illustrations, not official manufacturer product photos. Need a specific brand/model, spare part or bulk quantity? Contact us to confirm specifications, availability and final pricing.</div></div></section>
-<section class="contact"><div class="wrap"><div class="eyebrow" style="color:#8bdaf1">CONTACT NEHA ENTERPRISES</div><h2>Need help choosing a product?</h2><p>Phone: 8890034736<br>Email: shyamprata0589@gmail.com<br>Joshi Marg, Jhotwara, Jaipur, Rajasthan</p><a class="btn" href="https://wa.me/918890034736">Ask on WhatsApp ↗</a></div></section><footer>© 2026 Neha Enterprises · Pneumatic products and industrial air solutions</footer>
+  <!-- Main Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo">
+        <div class="brand-icon-box">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">NEHA <span>ENTERPRISES</span></span>
+          <span class="brand-subtitle">Pneumatics & Air Tools</span>
+        </div>
+      </a>
 
-<div class="cart-view" id="cartView" aria-hidden="true" onclick="if(event.target===this)closeCart()">
-  <section class="cart-panel" role="dialog" aria-modal="true" aria-label="Shopping cart">
-    <div class="cart-head"><h2>Your Cart</h2><button onclick="closeCart()" aria-label="Close cart">✕</button></div>
-    <div id="cartItems"></div>
-    <div class="cart-total"><span>Estimated total</span><span id="cartTotal">₹0</span></div>
-    <p class="detail-muted">Final price, GST, stock and delivery will be confirmed by Neha Enterprises before order confirmation.</p>
-    <div class="cart-actions">
-      <button class="btn" onclick="checkoutCart()">Proceed to order on WhatsApp ↗</button>
-      <button class="btn back-btn" onclick="closeCart()">Continue shopping</button>
+      <!-- Navigation Links -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#" class="nav-link active">Home</a></li>
+          <li><a href="#catalog" class="nav-link">Products Catalog</a></li>
+          <li><a href="#categories" class="nav-link">Categories</a></li>
+          <li><a href="#heritage" class="nav-link">Our Legacy (Since 2006)</a></li>
+          <li><a href="#rfq" class="nav-link">Bulk RFQ</a></li>
+          <li><a href="#faq" class="nav-link">Support & FAQ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <button class="cart-btn" id="cartToggleBtn" aria-label="Shopping Cart">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          <span>Cart</span>
+          <span class="cart-badge" id="cartBadge" style="display: none;">0</span>
+        </button>
+
+        <a href="#rfq" class="rfq-nav-btn">
+          <span>Get Quote</span>
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-glow"></div>
+    <div class="hero-glow-secondary"></div>
+    <div class="container hero-grid">
+      <!-- Left Content -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>●</span>
+          <span>Trusted Pneumatics Partner Since 2006</span>
+        </div>
+        
+        <h1 class="hero-title">
+          Engineered For Power. <br />
+          <span class="text-gradient">Premium Pneumatics</span> & Air Tools.
+        </h1>
+
+        <p class="hero-description">
+          Empowering manufacturing plants, automotive workshops, and automation engineers with high-end pneumatic cylinders, solenoid valves, FRL air treatment units, and heavy-duty air tools. Tested for continuous industrial duty.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#catalog" class="btn-primary">
+            <span>Explore Online Catalog</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <a href="#rfq" class="btn-outline-white">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <span>Request Custom RFQ</span>
+          </a>
+        </div>
+
+        <div class="hero-stats-row">
+          <div class="stat-item">
+            <span class="stat-number">2006</span>
+            <span class="stat-label">Serving Since Year</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Pneumatic Products</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Factory Leak-Tested</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">Pan-India</span>
+            <span class="stat-label">Fast Safe Shipping</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Showcase Card -->
+      <div class="hero-card-showcase">
+        <div class="showcase-header">
+          <span class="showcase-tag">★ Featured Pneumatic Tool</span>
+          <span style="font-size: 0.8rem; color: #38bdf8;">Twin-Hammer 850 Nm</span>
+        </div>
+        <div class="showcase-image-box">
+          <img src="images/impact-wrench.jpg" alt="1/2 Inch Twin Hammer Air Impact Wrench" />
+        </div>
+        <div class="showcase-details">
+          <h4>1/2" Heavy-Duty Air Impact Wrench (850 Nm)</h4>
+          <div class="showcase-specs-mini">
+            <span>⚡ 850 Nm Max</span>
+            <span>⚙️ 7,500 RPM</span>
+            <span>🔩 1/2" Drive</span>
+          </div>
+        </div>
+        <div class="showcase-footer">
+          <div>
+            <div style="font-size: 0.75rem; color: #94a3b8;">Wholesale Price</div>
+            <span class="showcase-price">₹4,650</span>
+          </div>
+          <button class="showcase-action-btn" onclick="openProductModal('tool-iw-01')">
+            Quick Details & Order →
+          </button>
+        </div>
+      </div>
     </div>
   </section>
-</div>
 
-<script>
-const items=[{"name":"Impact Wrench 1/2 inch","brand":"CP / Chicago Pneumatic","cat":"Tools","price":"₹4,000–₹18,000","desc":"General workshop fastening","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Impact Wrench 3/4 inch","brand":"CP · IR","cat":"Tools","price":"₹9,000–₹32,000","desc":"Heavy-duty fastening","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Impact Wrench 1 inch","brand":"IR / Ingersoll Rand","cat":"Tools","price":"₹18,000–₹65,000","desc":"Heavy vehicle and industrial use","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Pneumatic Impact Driver","brand":"CP · IR","cat":"Tools","price":"₹3,000–₹16,000","desc":"Fastening applications","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Air Impact Ratchet","brand":"IR · Blue Point","cat":"Tools","price":"₹3,500–₹14,000","desc":"Compact access fastening","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Pneumatic Screwdriver","brand":"Industrial range","cat":"Tools","price":"₹2,000–₹12,000","desc":"Assembly-line fastening","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Pneumatic Drill","brand":"CP · IR","cat":"Tools","price":"₹3,000–₹18,000","desc":"Air-powered drilling","img":"https://sydneytools.com.au/assets/images/products/2/1/7/8/2178/AD42B01F00524F6F5E2793441E40ED8ECCF342B21962CD2F7DC2691ACB98050D.jpeg"},{"name":"Pneumatic Die Grinder","brand":"CP · IR","cat":"Tools","price":"₹2,500–₹12,000","desc":"Grinding and deburring","img":"https://i5.walmartimages.com/seo/1-4-inch-Air-Angle-Die-Grinder-Pneumatic-Grinding-Machine_19ff27fd-a552-4bdf-a11e-663915c654e2.7eeea91f06d8d493609cf507c6adbc74.jpeg?odnBg=FFFFFF&odnHeight=573&odnWidth=573"},{"name":"Pneumatic Angle Grinder","brand":"CP · IR","cat":"Tools","price":"₹5,000–₹28,000","desc":"Industrial grinding","img":"https://i5.walmartimages.com/seo/1-4-inch-Air-Angle-Die-Grinder-Pneumatic-Grinding-Machine_19ff27fd-a552-4bdf-a11e-663915c654e2.7eeea91f06d8d493609cf507c6adbc74.jpeg?odnBg=FFFFFF&odnHeight=573&odnWidth=573"},{"name":"Pneumatic Straight Grinder","brand":"IR","cat":"Tools","price":"₹3,000–₹15,000","desc":"Precision finishing","img":"https://i5.walmartimages.com/seo/1-4-inch-Air-Angle-Die-Grinder-Pneumatic-Grinding-Machine_19ff27fd-a552-4bdf-a11e-663915c654e2.7eeea91f06d8d493609cf507c6adbc74.jpeg?odnBg=FFFFFF&odnHeight=573&odnWidth=573"},{"name":"Pneumatic Orbital Sander","brand":"Professional range","cat":"Tools","price":"₹3,000–₹16,000","desc":"Surface preparation","img":"https://micraherramientas.com.mx/wp-content/uploads/2024/06/cq5dam.web_.1600.1600-41.jpeg"},{"name":"Pneumatic Belt Sander","brand":"Industrial range","cat":"Tools","price":"₹4,000–₹22,000","desc":"Sanding and finishing","img":"https://micraherramientas.com.mx/wp-content/uploads/2024/06/cq5dam.web_.1600.1600-41.jpeg"},{"name":"Pneumatic Needle Scaler","brand":"Industrial range","cat":"Tools","price":"₹4,000–₹25,000","desc":"Rust and scale removal","img":"https://www.northerntool.com/products/107/images/107249.jpg"},{"name":"Pneumatic Chipping Hammer","brand":"Industrial range","cat":"Tools","price":"₹3,000–₹20,000","desc":"Chipping applications","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Air Riveter","brand":"Professional range","cat":"Tools","price":"₹5,000–₹30,000","desc":"Rivet installation","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Pneumatic Grease Gun","brand":"Workshop range","cat":"Tools","price":"₹1,500–₹8,000","desc":"Workshop lubrication","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Pneumatic Spray Gun","brand":"ESAR · Professional","cat":"Tools","price":"₹900–₹8,000","desc":"Painting and coating","img":"https://med.greatecno.com/1502086-product_main/yato-yt-2341-hvlp-spray-gun-0-6-l-capacity-for-professional-fine-painting-finish-white-product-6-l.jpg"},{"name":"Air Blow Gun","brand":"Industrial range","cat":"Tools","price":"₹150–₹1,500","desc":"Cleaning with compressed air","img":"https://media.prodavnicaalata.rs/uploads/products/7776/1.jpg"},{"name":"Pneumatic Nailer / Stapler","brand":"Professional range","cat":"Tools","price":"₹2,000–₹12,000","desc":"Air-powered fastening","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Air Caulking Gun","brand":"Professional range","cat":"Tools","price":"₹1,000–₹7,000","desc":"Sealant application","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Portable Air Compressor","brand":"ELGi · Kirloskar","cat":"Air","price":"₹12,000–₹45,000","desc":"Portable compressed air","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"},{"name":"Reciprocating Air Compressor","brand":"ELGi · Kirloskar","cat":"Air","price":"₹18,000–₹90,000","desc":"Workshop air supply","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"},{"name":"Oil-free Air Compressor","brand":"Industrial range","cat":"Air","price":"₹20,000–₹1,50,000+","desc":"Applications needing oil-free air","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"},{"name":"Rotary Screw Air Compressor","brand":"ELGi · IR","cat":"Air","price":"₹1,00,000–₹5,00,000+","desc":"Continuous industrial air","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"},{"name":"High-pressure Air Compressor","brand":"Industrial range","cat":"Air","price":"₹35,000–₹2,50,000+","desc":"Higher-pressure applications","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"},{"name":"Diesel Air Compressor","brand":"Industrial range","cat":"Air","price":"₹1,00,000–₹6,00,000+","desc":"Portable site applications","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"},{"name":"Air Receiver Tank","brand":"Industrial range","cat":"Air","price":"₹8,000–₹65,000","desc":"Compressed-air storage","img":"https://www.instrutek.com.mx/cdn/shop/files/D_619598-MLM53267719161_012023-B.jpg?v=1736532124&width=800"},{"name":"Air Dryer","brand":"Industrial range","cat":"Air","price":"₹15,000–₹1,50,000+","desc":"Moisture removal from air","img":"https://www.instrutek.com.mx/cdn/shop/files/D_619598-MLM53267719161_012023-B.jpg?v=1736532124&width=800"},{"name":"Air Compressor Filter","brand":"ELGi · IR compatible range","cat":"Air","price":"₹500–₹12,000","desc":"Air intake and line filtration","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"},{"name":"Compressor Lubricating Oil","brand":"Compatible service range","cat":"Air","price":"₹500–₹5,000","desc":"Confirm oil specification first","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"},{"name":"Pneumatic Cylinder","brand":"Industrial range","cat":"Components","price":"₹800–₹15,000+","desc":"Linear actuation","img":"https://store.camozzi.co.uk/imagecache/89627a36-ebcc-4296-9f4b-ab1b010b1259/42P2_1000x1000.jpg"},{"name":"Compact Pneumatic Cylinder","brand":"Industrial range","cat":"Components","price":"₹600–₹8,000","desc":"Compact automation systems","img":"https://store.camozzi.co.uk/imagecache/89627a36-ebcc-4296-9f4b-ab1b010b1259/42P2_1000x1000.jpg"},{"name":"Double-acting Cylinder","brand":"Industrial range","cat":"Components","price":"₹800–₹12,000","desc":"Extend and retract actuation","img":"https://store.camozzi.co.uk/imagecache/89627a36-ebcc-4296-9f4b-ab1b010b1259/42P2_1000x1000.jpg"},{"name":"Rodless Cylinder","brand":"Industrial range","cat":"Components","price":"₹5,000–₹40,000+","desc":"Long-stroke automation","img":"https://store.camozzi.co.uk/imagecache/89627a36-ebcc-4296-9f4b-ab1b010b1259/42P2_1000x1000.jpg"},{"name":"Solenoid Directional Valve","brand":"Industrial range","cat":"Components","price":"₹900–₹8,000","desc":"Electrical directional control","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"Manual Pneumatic Valve","brand":"Industrial range","cat":"Components","price":"₹250–₹3,000","desc":"Manual air control","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"Mechanical Pneumatic Valve","brand":"Industrial range","cat":"Components","price":"₹300–₹3,500","desc":"Mechanically actuated control","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"FRL Combination Unit","brand":"Industrial range","cat":"Components","price":"₹650–₹6,500","desc":"Filter, regulator and lubricator","img":"https://www.instrutek.com.mx/cdn/shop/files/D_619598-MLM53267719161_012023-B.jpg?v=1736532124&width=800"},{"name":"Air Filter","brand":"Industrial range","cat":"Components","price":"₹250–₹3,000","desc":"Compressed-air filtration","img":"https://www.instrutek.com.mx/cdn/shop/files/D_619598-MLM53267719161_012023-B.jpg?v=1736532124&width=800"},{"name":"Air Pressure Regulator","brand":"Industrial range","cat":"Components","price":"₹300–₹3,500","desc":"Set operating pressure","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"Pneumatic Lubricator","brand":"Industrial range","cat":"Components","price":"₹250–₹2,500","desc":"Air-line lubrication","img":"https://www.instrutek.com.mx/cdn/shop/files/D_619598-MLM53267719161_012023-B.jpg?v=1736532124&width=800"},{"name":"Flow Control Valve","brand":"Industrial range","cat":"Components","price":"₹150–₹2,000","desc":"Adjust cylinder speed","img":"https://store.camozzi.co.uk/imagecache/89627a36-ebcc-4296-9f4b-ab1b010b1259/42P2_1000x1000.jpg"},{"name":"Check Valve","brand":"Industrial range","cat":"Components","price":"₹150–₹2,000","desc":"One-way air flow","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"Quick Exhaust Valve","brand":"Industrial range","cat":"Components","price":"₹250–₹2,500","desc":"Faster cylinder exhaust","img":"https://store.camozzi.co.uk/imagecache/89627a36-ebcc-4296-9f4b-ab1b010b1259/42P2_1000x1000.jpg"},{"name":"Pneumatic Push-in Fittings","brand":"Industrial range","cat":"Components","price":"₹25–₹500","desc":"Tubing connections","img":"https://www.fescolo.com/data/watermark/20220620/62afe4df01452.jpg"},{"name":"Pneumatic PU Tube","brand":"Industrial range","cat":"Components","price":"₹20–₹250 / metre","desc":"Pneumatic tubing","img":"https://www.fescolo.com/data/watermark/20220620/62afe4df01452.jpg"},{"name":"Nylon Air Tubing","brand":"Industrial range","cat":"Components","price":"₹25–₹300 / metre","desc":"Air-line tubing","img":"https://www.fescolo.com/data/watermark/20220620/62afe4df01452.jpg"},{"name":"Pneumatic Muffler / Silencer","brand":"Industrial range","cat":"Components","price":"₹50–₹900","desc":"Reduce exhaust noise","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"Air Hose","brand":"Workshop range","cat":"Accessories","price":"₹50–₹500 / metre","desc":"Flexible compressed-air line","img":"https://tshop.r10s.jp/asahipenstore/cabinet/fujiwara/tn19/4977292445863.jpg?fitin=720%3A720"},{"name":"Heavy-duty Rubber Air Hose","brand":"Workshop range","cat":"Accessories","price":"₹100–₹800 / metre","desc":"Workshop and industrial hose","img":"https://tshop.r10s.jp/asahipenstore/cabinet/fujiwara/tn19/4977292445863.jpg?fitin=720%3A720"},{"name":"PU Coiled Hose","brand":"Workshop range","cat":"Accessories","price":"₹250–₹2,000","desc":"Flexible tool connection","img":"https://tshop.r10s.jp/asahipenstore/cabinet/fujiwara/tn19/4977292445863.jpg?fitin=720%3A720"},{"name":"Quick Coupler & Plug Set","brand":"Blue Point · Industrial","cat":"Accessories","price":"₹100–₹1,500","desc":"Quick-connect air line","img":"https://www.fescolo.com/data/watermark/20220622/62b2813b62410.jpg"},{"name":"Air Hose Reel","brand":"Workshop range","cat":"Accessories","price":"₹2,000–₹15,000","desc":"Organised hose storage","img":"https://tshop.r10s.jp/asahipenstore/cabinet/fujiwara/tn19/4977292445863.jpg?fitin=720%3A720"},{"name":"Pressure Gauge","brand":"Industrial range","cat":"Accessories","price":"₹150–₹1,500","desc":"Air pressure monitoring","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"Digital Pressure Gauge","brand":"Industrial range","cat":"Accessories","price":"₹800–₹5,000","desc":"Digital pressure reading","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"Air Manifold","brand":"Industrial range","cat":"Accessories","price":"₹300–₹4,000","desc":"Distribute compressed air","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"Air Line Piping & Connectors","brand":"Industrial range","cat":"Accessories","price":"Price on request","desc":"Air distribution installation","img":"https://www.fescolo.com/data/watermark/20220622/62b2813b62410.jpg"},{"name":"Compressor Service Kit","brand":"Confirm model / ELGi / IR","cat":"Accessories","price":"Price on request","desc":"Service parts by compressor model","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"},{"name":"Air Filter Element","brand":"Confirm model / ELGi / IR","cat":"Accessories","price":"₹300–₹8,000","desc":"Replacement filter element","img":"https://www.instrutek.com.mx/cdn/shop/files/D_619598-MLM53267719161_012023-B.jpg?v=1736532124&width=800"},{"name":"Compressor Oil Filter","brand":"Confirm model / ELGi / IR","cat":"Accessories","price":"₹300–₹5,000","desc":"Replacement oil filtration","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"},{"name":"Compressor Air-end Spares","brand":"Model-specific","cat":"Accessories","price":"Price on request","desc":"Confirm exact compressor model","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"},{"name":"Pneumatic Tool Repair Spares","brand":"CP · IR · model-specific","cat":"Accessories","price":"Price on request","desc":"Parts depend on tool model","img":"https://www.instrutek.com.mx/cdn/shop/files/D_619598-MLM53267719161_012023-B.jpg?v=1736532124&width=800"},{"name":"Impact Wrench Socket Set","brand":"Workshop range","cat":"Accessories","price":"₹500–₹5,000","desc":"Sockets for impact tools","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Air Tool Lubricator Oil","brand":"Tool-compatible range","cat":"Accessories","price":"₹250–₹2,000","desc":"Check tool manufacturer guidance","img":"https://www.instrutek.com.mx/cdn/shop/files/D_619598-MLM53267719161_012023-B.jpg?v=1736532124&width=800"},{"name":"Pneumatic Torque Wrench","brand":"CP · IR compatible range","cat":"Tools","price":"Price on request","desc":"Controlled torque fastening","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Pneumatic Pulse Tool","brand":"Industrial assembly range","cat":"Tools","price":"Price on request","desc":"Repeatable fastening for production lines","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Pneumatic Rivet Nut Tool","brand":"Industrial range","cat":"Tools","price":"₹8,000–₹45,000","desc":"Install rivet nuts in sheet metal","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Air Hydraulic Riveter","brand":"Workshop range","cat":"Tools","price":"₹8,000–₹40,000","desc":"Heavy-duty riveting applications","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Pneumatic Reciprocating Saw","brand":"Industrial range","cat":"Tools","price":"₹3,000–₹18,000","desc":"Cutting metal and composite materials","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Pneumatic Jigsaw","brand":"Workshop range","cat":"Tools","price":"₹3,000–₹16,000","desc":"Curved and precision cutting","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Pneumatic Polisher","brand":"Professional range","cat":"Tools","price":"₹3,000–₹18,000","desc":"Polishing and finishing surfaces","img":"https://micraherramientas.com.mx/wp-content/uploads/2024/06/cq5dam.web_.1600.1600-41.jpeg"},{"name":"Pneumatic Needle Scaler Kit","brand":"Industrial range","cat":"Tools","price":"₹4,000–₹25,000","desc":"Remove rust, paint and scale","img":"https://www.northerntool.com/products/107/images/107249.jpg"},{"name":"Pneumatic Caulking Gun","brand":"Professional range","cat":"Tools","price":"₹1,000–₹7,000","desc":"Apply sealant and adhesive","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Pneumatic Vacuum Pump","brand":"Industrial range","cat":"Tools","price":"Price on request","desc":"Vacuum generation for industrial use","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Pneumatic Staple Gun","brand":"Workshop range","cat":"Tools","price":"₹2,000–₹10,000","desc":"Fasten upholstery and packaging","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Air Duster / Safety Blow Gun","brand":"Industrial range","cat":"Tools","price":"₹150–₹1,800","desc":"Blow-off and cleaning applications","img":"https://media.prodavnicaalata.rs/uploads/products/7776/1.jpg"},{"name":"Air Impact Wrench Socket Adapter","brand":"Workshop range","cat":"Accessories","price":"₹150–₹1,500","desc":"Connect compatible impact sockets","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Impact Socket Set","brand":"Workshop range","cat":"Accessories","price":"₹500–₹6,000","desc":"Impact-rated sockets for air tools","img":"https://www.instrutek.com.mx/cdn/shop/files/D_619598-MLM53267719161_012023-B.jpg?v=1736532124&width=800"},{"name":"Pneumatic Tool Balancer","brand":"Assembly-line range","cat":"Accessories","price":"₹2,000–₹15,000","desc":"Support tools at workstations","img":"https://www.instrutek.com.mx/cdn/shop/files/D_619598-MLM53267719161_012023-B.jpg?v=1736532124&width=800"},{"name":"Air Tool Filter-Regulator","brand":"Industrial range","cat":"Components","price":"₹500–₹5,000","desc":"Prepare air for pneumatic tools","img":"https://www.instrutek.com.mx/cdn/shop/files/D_619598-MLM53267719161_012023-B.jpg?v=1736532124&width=800"},{"name":"Mini FRL Unit","brand":"Industrial range","cat":"Components","price":"₹400–₹3,500","desc":"Compact filter and pressure regulation","img":"https://www.instrutek.com.mx/cdn/shop/files/D_619598-MLM53267719161_012023-B.jpg?v=1736532124&width=800"},{"name":"Auto Drain Valve","brand":"Industrial range","cat":"Components","price":"₹800–₹8,000","desc":"Automatically drain condensate","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"Compressed Air Water Separator","brand":"Industrial range","cat":"Components","price":"₹500–₹6,000","desc":"Separate moisture from compressed air","img":"https://www.fescolo.com/data/watermark/20220622/62b2813b62410.jpg"},{"name":"Coalescing Air Filter","brand":"Industrial range","cat":"Components","price":"₹1,000–₹15,000","desc":"Fine filtration of oil aerosols","img":"https://www.instrutek.com.mx/cdn/shop/files/D_619598-MLM53267719161_012023-B.jpg?v=1736532124&width=800"},{"name":"Activated Carbon Air Filter","brand":"Industrial range","cat":"Components","price":"₹1,500–₹18,000","desc":"Remove oil vapour and odours","img":"https://www.instrutek.com.mx/cdn/shop/files/D_619598-MLM53267719161_012023-B.jpg?v=1736532124&width=800"},{"name":"Air Pressure Switch","brand":"Industrial range","cat":"Components","price":"₹500–₹5,000","desc":"Switch at set pressure threshold","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"Pneumatic Timer Valve","brand":"Industrial range","cat":"Components","price":"₹800–₹6,000","desc":"Time-delay pneumatic control","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"5/2 Way Solenoid Valve","brand":"Industrial range","cat":"Components","price":"₹700–₹7,000","desc":"Directional control for cylinders","img":"https://store.camozzi.co.uk/imagecache/89627a36-ebcc-4296-9f4b-ab1b010b1259/42P2_1000x1000.jpg"},{"name":"5/3 Way Solenoid Valve","brand":"Industrial range","cat":"Components","price":"₹1,000–₹9,000","desc":"Three-position directional control","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"3/2 Way Pneumatic Valve","brand":"Industrial range","cat":"Components","price":"₹300–₹3,000","desc":"On/off control for air circuits","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"Pneumatic Foot Pedal Valve","brand":"Industrial range","cat":"Components","price":"₹700–₹5,000","desc":"Hands-free pneumatic control","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"Pneumatic Hand Lever Valve","brand":"Industrial range","cat":"Components","price":"₹300–₹3,500","desc":"Manual directional control","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"Pneumatic Shuttle Valve","brand":"Industrial range","cat":"Components","price":"₹200–₹2,500","desc":"Dual-signal OR logic function","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"Pneumatic AND Valve","brand":"Industrial range","cat":"Components","price":"₹250–₹3,000","desc":"Two-pressure pneumatic logic","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"Pneumatic Check Valve","brand":"Industrial range","cat":"Components","price":"₹150–₹2,000","desc":"Prevent reverse air flow","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"Pneumatic Quick Exhaust Valve","brand":"Industrial range","cat":"Components","price":"₹250–₹2,500","desc":"Speed up cylinder exhaust","img":"https://store.camozzi.co.uk/imagecache/89627a36-ebcc-4296-9f4b-ab1b010b1259/42P2_1000x1000.jpg"},{"name":"Pneumatic Gripper","brand":"Automation range","cat":"Components","price":"₹2,000–₹25,000","desc":"Pick-and-place automation","img":"https://www.fescolo.com/data/watermark/20220622/62b2813b62410.jpg"},{"name":"Rotary Pneumatic Actuator","brand":"Automation range","cat":"Components","price":"₹2,000–₹25,000","desc":"Rotary motion for automation","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"Guided Pneumatic Cylinder","brand":"Automation range","cat":"Components","price":"₹2,000–₹25,000","desc":"Stable linear motion under load","img":"https://store.camozzi.co.uk/imagecache/89627a36-ebcc-4296-9f4b-ab1b010b1259/42P2_1000x1000.jpg"},{"name":"Twin Rod Pneumatic Cylinder","brand":"Automation range","cat":"Components","price":"₹1,500–₹18,000","desc":"Anti-rotation linear actuation","img":"https://store.camozzi.co.uk/imagecache/89627a36-ebcc-4296-9f4b-ab1b010b1259/42P2_1000x1000.jpg"},{"name":"Pneumatic Slide Table","brand":"Automation range","cat":"Components","price":"₹3,000–₹35,000","desc":"Compact guided motion","img":"https://www.fescolo.com/data/watermark/20220622/62b2813b62410.jpg"},{"name":"Cylinder Mounting Brackets","brand":"Industrial range","cat":"Accessories","price":"₹100–₹2,000","desc":"Mount pneumatic cylinders securely","img":"https://store.camozzi.co.uk/imagecache/89627a36-ebcc-4296-9f4b-ab1b010b1259/42P2_1000x1000.jpg"},{"name":"Cylinder Magnetic Sensor","brand":"Automation range","cat":"Components","price":"₹300–₹3,000","desc":"Detect piston position","img":"https://store.camozzi.co.uk/imagecache/89627a36-ebcc-4296-9f4b-ab1b010b1259/42P2_1000x1000.jpg"},{"name":"Pneumatic Silencer","brand":"Industrial range","cat":"Components","price":"₹50–₹900","desc":"Reduce valve exhaust noise","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"Push-in Elbow Fitting","brand":"Industrial range","cat":"Components","price":"₹25–₹400","desc":"Connect tubing at 90 degrees","img":"https://www.fescolo.com/data/watermark/20220620/62afe4df01452.jpg"},{"name":"Push-in Tee Fitting","brand":"Industrial range","cat":"Components","price":"₹30–₹500","desc":"Branch pneumatic tubing","img":"https://www.fescolo.com/data/watermark/20220620/62afe4df01452.jpg"},{"name":"Bulkhead Pneumatic Fitting","brand":"Industrial range","cat":"Components","price":"₹40–₹600","desc":"Pass tubing through panels","img":"https://www.fescolo.com/data/watermark/20220620/62afe4df01452.jpg"},{"name":"Brass Pneumatic Fitting","brand":"Industrial range","cat":"Components","price":"₹25–₹500","desc":"Threaded air-line connection","img":"https://www.fescolo.com/data/watermark/20220622/62b2813b62410.jpg"},{"name":"Pneumatic Speed Controller","brand":"Industrial range","cat":"Components","price":"₹100–₹1,200","desc":"Adjust cylinder speed","img":"https://store.camozzi.co.uk/imagecache/89627a36-ebcc-4296-9f4b-ab1b010b1259/42P2_1000x1000.jpg"},{"name":"Pneumatic Tube Cutter","brand":"Workshop range","cat":"Accessories","price":"₹150–₹1,500","desc":"Cut pneumatic tubing cleanly","img":"https://www.fescolo.com/data/watermark/20220620/62afe4df01452.jpg"},{"name":"Air Hose Clamp","brand":"Workshop range","cat":"Accessories","price":"₹20–₹300","desc":"Secure air hose connections","img":"https://tshop.r10s.jp/asahipenstore/cabinet/fujiwara/tn19/4977292445863.jpg?fitin=720%3A720"},{"name":"Compressed Air Blow-off Nozzle","brand":"Industrial range","cat":"Accessories","price":"₹100–₹1,500","desc":"Directed air cleaning","img":"https://media.prodavnicaalata.rs/uploads/products/7776/1.jpg"},{"name":"Air Line Lubricator Oil","brand":"Tool-compatible range","cat":"Accessories","price":"₹250–₹2,000","desc":"Lubrication for air tools","img":"https://www.instrutek.com.mx/cdn/shop/files/D_619598-MLM53267719161_012023-B.jpg?v=1736532124&width=800"},{"name":"Compressor Intake Valve","brand":"Model-specific","cat":"Accessories","price":"Price on request","desc":"Confirm compressor make and model","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"},{"name":"Compressor Minimum Pressure Valve","brand":"Model-specific","cat":"Accessories","price":"Price on request","desc":"Compressor pressure-system spare","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"},{"name":"Compressor Thermostat Valve","brand":"Model-specific","cat":"Accessories","price":"Price on request","desc":"Temperature control spare","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"},{"name":"Compressor Separator Element","brand":"ELGi / IR compatible range","cat":"Accessories","price":"₹1,000–₹18,000","desc":"Oil-air separation element by model","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"},{"name":"Compressor Oil Separator","brand":"Model-specific","cat":"Accessories","price":"Price on request","desc":"Confirm exact compressor model","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"},{"name":"Compressor Belt Set","brand":"Model-specific","cat":"Accessories","price":"Price on request","desc":"Drive belt replacement by model","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"},{"name":"Compressor Cooling Fan","brand":"Model-specific","cat":"Accessories","price":"Price on request","desc":"Cooling-system replacement part","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"},{"name":"Compressor Pressure Relief Valve","brand":"Industrial range","cat":"Components","price":"₹500–₹5,000","desc":"Pressure safety component; select to specification","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"},{"name":"Compressor Condensate Drain","brand":"Industrial range","cat":"Components","price":"₹800–₹8,000","desc":"Drain condensate from air system","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"},{"name":"Air Receiver Safety Valve","brand":"Industrial range","cat":"Components","price":"₹500–₹5,000","desc":"Safety relief valve selected to vessel rating","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"Air Receiver Tank Gauge Kit","brand":"Industrial range","cat":"Accessories","price":"₹300–₹2,500","desc":"Pressure indication accessories","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"Refrigerated Air Dryer","brand":"Industrial range","cat":"Air","price":"₹35,000–₹3,00,000+","desc":"Dry compressed air for industrial systems","img":"https://www.instrutek.com.mx/cdn/shop/files/D_619598-MLM53267719161_012023-B.jpg?v=1736532124&width=800"},{"name":"Desiccant Air Dryer","brand":"Industrial range","cat":"Air","price":"₹50,000–₹5,00,000+","desc":"Low dew-point compressed air","img":"https://www.instrutek.com.mx/cdn/shop/files/D_619598-MLM53267719161_012023-B.jpg?v=1736532124&width=800"},{"name":"Air Line Filter Set","brand":"Industrial range","cat":"Components","price":"₹500–₹8,000","desc":"Filter assemblies for air distribution","img":"https://www.fescolo.com/data/watermark/20220622/62b2813b62410.jpg"},{"name":"Compressed Air Flow Meter","brand":"Industrial range","cat":"Components","price":"₹5,000–₹50,000+","desc":"Monitor compressed-air consumption","img":"https://www.fescolo.com/data/watermark/20220622/62b2813b62410.jpg"},{"name":"Air Leak Detection Gun","brand":"Workshop range","cat":"Tools","price":"Price on request","desc":"Help locate compressed-air leaks","img":"https://store.hytorc.com/cdn/shop/products/Impact_wrench_1_860x.png?v=1672860198"},{"name":"Pneumatic Test Hose Assembly","brand":"Industrial range","cat":"Accessories","price":"Price on request","desc":"Application-specific hose assembly","img":"https://tshop.r10s.jp/asahipenstore/cabinet/fujiwara/tn19/4977292445863.jpg?fitin=720%3A720"},{"name":"Air Preparation Manifold","brand":"Industrial range","cat":"Components","price":"₹500–₹8,000","desc":"Centralised air preparation","img":"https://www.instrutek.com.mx/cdn/shop/files/D_619598-MLM53267719161_012023-B.jpg?v=1736532124&width=800"},{"name":"Pneumatic Control Panel","brand":"Custom-built","cat":"Components","price":"Price on request","desc":"Designed to circuit and application","img":"https://www.fescolo.com/data/watermark/20220622/62b2813b62410.jpg"},{"name":"Air Compressor Starter Panel","brand":"Industrial range","cat":"Components","price":"Price on request","desc":"Electrical control panel by motor rating","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"},{"name":"Compressed Air Piping System","brand":"Industrial range","cat":"Accessories","price":"Price on request","desc":"Site-measured piping and installation","img":"https://www.instrutek.com.mx/cdn/shop/files/D_619598-MLM53267719161_012023-B.jpg?v=1736532124&width=800"},{"name":"Air Receiver Tank Drain Kit","brand":"Industrial range","cat":"Accessories","price":"₹250–₹2,500","desc":"Drain fittings for receiver tanks","img":"https://www.fescolo.com/data/watermark/20220622/62b2813b62410.jpg"},{"name":"Compressor Pressure Gauge","brand":"Industrial range","cat":"Accessories","price":"₹150–₹1,500","desc":"Monitor receiver or line pressure","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"},{"name":"Air Flow Control Valve","brand":"Industrial range","cat":"Components","price":"₹150–₹2,000","desc":"Control pneumatic flow rate","img":"https://image.made-in-china.com/155f0j00sABcKmvzQtki/China-Kgsy-of-Solenoid-Valve-Pneumatic-Air-Valve-Solenoid-Air-Control-Valve-Accessories.webp"},{"name":"Pneumatic Tubing Connector Set","brand":"Industrial range","cat":"Components","price":"₹100–₹1,500","desc":"Assorted connectors for air tubing","img":"https://www.fescolo.com/data/watermark/20220620/62afe4df01452.jpg"},{"name":"Air Tool Repair Kit","brand":"CP / IR / model-specific","cat":"Accessories","price":"Price on request","desc":"Seals and service parts by tool model","img":"https://www.instrutek.com.mx/cdn/shop/files/D_619598-MLM53267719161_012023-B.jpg?v=1736532124&width=800"},{"name":"Pneumatic Cylinder Seal Kit","brand":"Model-specific","cat":"Accessories","price":"Price on request","desc":"Replacement seals for cylinder model","img":"https://store.camozzi.co.uk/imagecache/89627a36-ebcc-4296-9f4b-ab1b010b1259/42P2_1000x1000.jpg"},{"name":"Compressor Maintenance Kit","brand":"ELGi / IR / model-specific","cat":"Accessories","price":"Price on request","desc":"Service kit selected by compressor model","img":"https://aircompressors.com/assets/15/7b/157bb9da-047f-4b0e-922d-3b5f7e994c66/d800x600-CR_15_Horizontal%20No%20Background.png"}];
+  <!-- Category Highlights Section -->
+  <section class="categories-section" id="categories">
+    <div class="container">
+      <div class="section-head-center">
+        <span class="section-eyebrow">Complete Range of Pneumatic Products</span>
+        <h2 class="section-title">Industrial Solutions Tailored for Every Machine</h2>
+        <p class="section-subtitle">Select a category below to explore technical specifications and instant pricing.</p>
+      </div>
 
-let current="All";
-let cart=[];
-const waNumber="918890034736";
-function safeText(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
-function productByName(name){return items.find(p=>p.name===name)}
-function priceNumber(price){const matches=String(price||"").match(/[\d,]+/g);if(!matches)return 0;return Number(matches[matches.length-1].replace(/,/g,""))||0}
-function filter(c,b){current=c;document.querySelectorAll(".filters button").forEach(x=>x.classList.toggle("active",x===b));document.querySelectorAll(".cat").forEach(x=>x.classList.remove("active"));render()}
-function pick(c,b){current=c;document.querySelectorAll(".filters button").forEach(x=>x.classList.toggle("active",x.dataset.cat===c));document.querySelectorAll(".cat").forEach(x=>x.classList.toggle("active",x===b));render();document.getElementById("products").scrollIntoView({behavior:"smooth"})}
-function render(){
- const q=document.getElementById("search").value.toLowerCase();
- const list=items.filter(x=>(current==="All"||x.cat===current)&&[x.name,x.brand,x.cat,x.desc].join(" ").toLowerCase().includes(q));
- document.getElementById("count").textContent=`Showing ${list.length} products`;
- document.getElementById("grid").innerHTML=list.map(x=>`<article class="card" style="cursor:pointer" onclick="openProductByIndex(${items.indexOf(x)})"><div class="photo"><img src="${x.img}" alt="${safeText(x.name)} product image" loading="lazy"></div><div class="info"><div class="brand">${safeText(x.brand)}</div><h3>${safeText(x.name)}</h3><p>${safeText(x.desc)}</p><div class="bottom"><div class="price">${safeText(x.price)}<small>Indicative range · confirm final price</small></div><button onclick="event.stopPropagation();openProductByIndex(${items.indexOf(x)})">View details →</button><button onclick="event.stopPropagation();addToCart(${items.indexOf(x)});">Add to cart +</button></div></div></article>`).join("")||"<p>No matching products found.</p>";
-}
-function openProductByIndex(i){const x=items[i];if(!x)return;openProduct(x.name)}
-function openProduct(name){
- const x=productByName(name);if(!x)return;
- const i=items.indexOf(x);
- document.getElementById("detailContent").innerHTML=`<div class="detail-panel"><div class="detail-image" id="detailImage"><img src="${x.img}" alt="${safeText(x.name)} product image"></div><div class="detail-info"><div class="eyebrow">PRODUCT DETAILS</div><div class="brand">${safeText(x.brand)}</div><h1>${safeText(x.name)}</h1><p>${safeText(x.desc)}. Contact us to confirm the exact model, specifications and availability for your application.</p><div class="detail-price">${safeText(x.price)}</div><div class="detail-muted">Indicative price range; final price depends on brand, model and availability.</div><h3>Product information</h3><ul><li><strong>Product:</strong> ${safeText(x.name)}</li><li><strong>Category:</strong> ${safeText(x.cat)}</li><li><strong>Brand / range:</strong> ${safeText(x.brand)}</li><li><strong>Typical use:</strong> ${safeText(x.desc)}</li><li><strong>Availability:</strong> Please confirm with Neha Enterprises</li></ul><label for="productQty"><strong>Quantity</strong></label><input id="productQty" type="number" min="1" value="1" style="display:block;padding:10px;width:100px;margin-top:7px;border:1px solid #dce5ef;border-radius:5px"><div class="detail-actions"><button class="btn add-cart" onclick="addToCart(${i},Number(document.getElementById('productQty').value)||1)">Add to cart</button><button class="btn" onclick="buyNow(${i},Number(document.getElementById('productQty').value)||1)">Buy now ↗</button><button class="btn back-btn" onclick="closeProduct()">Back to products</button></div><p class="detail-muted">Orders are confirmed by WhatsApp. No online payment is collected on this static website.</p></div></div><div class="note">Product image shown here is currently a catalogue illustration. Replace with the exact manufacturer/product photograph before publishing as a real product photo.</div>`;
- const view=document.getElementById("detailView");view.classList.add("open");view.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";view.scrollTop=0;
- history.replaceState(null,"","#product-"+encodeURIComponent(x.name.toLowerCase().replace(/[^a-z0-9]+/g,"-")));
-}
-function closeProduct(){const view=document.getElementById("detailView");view.classList.remove("open");view.setAttribute("aria-hidden","true");document.body.style.overflow="";history.replaceState(null,"",location.pathname+location.search)}
-function addToCart(i,qty=1){const x=items[i];if(!x)return;qty=Math.max(1,Math.floor(Number(qty)||1));const found=cart.find(c=>c.name===x.name);if(found)found.qty+=qty;else cart.push({name:x.name,brand:x.brand,price:x.price,desc:x.desc,qty});updateCart();openCart()}
-function updateCart(){
- document.getElementById("cartCount").textContent=cart.reduce((n,x)=>n+x.qty,0);
- const box=document.getElementById("cartItems");
- if(!cart.length){box.innerHTML='<p>Your cart is empty. Browse products and add items to order.</p>';document.getElementById("cartTotal").textContent="₹0";return}
- box.innerHTML=cart.map((x,i)=>`<div class="cart-item"><div><strong>${safeText(x.name)}</strong><small>${safeText(x.brand)} · ${safeText(x.price)}</small><div class="qty"><button onclick="changeQty(${i},-1)">−</button><span>${x.qty}</span><button onclick="changeQty(${i},1)">+</button><button class="remove-item" onclick="removeCartItem(${i})">Remove</button></div></div></div>`).join("");
- const total=cart.reduce((sum,x)=>sum+priceNumber(x.price)*x.qty,0);
- document.getElementById("cartTotal").textContent=total?("₹"+total.toLocaleString("en-IN")+" (approx.)"):"To be confirmed";
-}
-function changeQty(i,d){if(!cart[i])return;cart[i].qty+=d;if(cart[i].qty<=0)cart.splice(i,1);updateCart()}
-function removeCartItem(i){cart.splice(i,1);updateCart()}
-function openCart(){updateCart();const v=document.getElementById("cartView");v.classList.add("open");v.setAttribute("aria-hidden","false")}
-function closeCart(){const v=document.getElementById("cartView");v.classList.remove("open");v.setAttribute("aria-hidden","true")}
-function orderMessage(lines){const msg="Hello Neha Enterprises, I would like to order/enquire about:\\n\\n"+lines+"\\n\\nPlease confirm exact model, final price, GST, stock and delivery.";window.open("https://wa.me/"+waNumber+"?text="+encodeURIComponent(msg),"_blank")}
-function buyNow(i,qty=1){const x=items[i];if(!x)return;qty=Math.max(1,Math.floor(Number(qty)||1));orderMessage("Product: "+x.name+"\\nBrand/range: "+x.brand+"\\nQuantity: "+qty+"\\nListed price: "+x.price);closeProduct()}
-function checkoutCart(){if(!cart.length){alert("Your cart is empty.");return}const lines=cart.map(x=>"• "+x.name+" | "+x.brand+" | Qty: "+x.qty+" | Listed price: "+x.price).join("\\n");orderMessage(lines);closeCart()}
-function orderProduct(name,brand){const x=productByName(name);if(x)buyNow(items.indexOf(x),1);else orderMessage("Product: "+name+"\\nBrand/range: "+brand)}
-document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeProduct();closeCart()}});
+      <div class="category-cards-grid" style="grid-template-columns: repeat(7, 1fr);">
+        <div class="category-card" data-category="compressors">
+          <div class="category-icon-wrap">⚡</div>
+          <div class="category-name">Air Compressors</div>
+          <span class="category-count">Piston, Screw, Silent</span>
+        </div>
+        <div class="category-card" data-category="air-tools">
+          <div class="category-icon-wrap">🔧</div>
+          <div class="category-name">Pneumatic Tools</div>
+          <span class="category-count">Impact, Die Grinder, Ratchet</span>
+        </div>
+        <div class="category-card" data-category="cylinders">
+          <div class="category-icon-wrap">⚙️</div>
+          <div class="category-name">Pneumatic Cylinders</div>
+          <span class="category-count">ISO 15552 & Compact</span>
+        </div>
+        <div class="category-card" data-category="valves">
+          <div class="category-icon-wrap">🔄</div>
+          <div class="category-name">Directional Valves</div>
+          <span class="category-count">5/2, Solenoid, Lever</span>
+        </div>
+        <div class="category-card" data-category="air-prep">
+          <div class="category-icon-wrap">🎛️</div>
+          <div class="category-name">Air Prep (F.R.L.)</div>
+          <span class="category-count">3-in-1 Filters & Regulators</span>
+        </div>
+        <div class="category-card" data-category="fittings">
+          <div class="category-icon-wrap">🔗</div>
+          <div class="category-name">Fittings & Tubing</div>
+          <span class="category-count">Push-In & PU Hoses</span>
+        </div>
+        <div class="category-card" data-category="accessories">
+          <div class="category-icon-wrap">🎚️</div>
+          <div class="category-name">Accessories</div>
+          <span class="category-count">Silencers & Gauges</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-render();
-</script><div style="max-width:1100px;margin:28px auto 10px;padding:14px 18px;border:1px solid #d8e2ec;border-radius:14px;background:#f7fafc;color:#52677a;font:13px/1.5 Arial,sans-serif"><strong>Product photo note:</strong> Product cards use real industrial product photographs sourced from public manufacturer/retailer product pages for visual reference. Exact brand/model may vary; confirm model, specification and availability before ordering.</div></body></html>
+  <!-- Product Catalog Section -->
+  <section class="catalog-section" id="catalog">
+    <div class="container">
+      <!-- Catalog Filter Bar -->
+      <div class="catalog-header-bar">
+        <div class="search-box">
+          <svg class="search-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input type="text" id="searchInput" class="search-input" placeholder="Search by name, model (e.g. SC-63, 4V210, Compressor, 850 Nm, Impact)..." />
+        </div>
+
+        <div class="catalog-controls">
+          <select id="sortSelect" class="sort-select">
+            <option value="default">Sort by: Featured</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Highest Rated</option>
+          </select>
+          <div class="catalog-stats" id="productsCount">23 Base Models • 500+ Configurations</div>
+        </div>
+      </div>
+
+      <!-- Filter Pills -->
+      <div class="filter-pills-bar">
+        <button class="filter-pill active" data-category="all">All Products (500+ Configurations)</button>
+        <button class="filter-pill" data-category="compressors">Air Compressors (Piston, Screw, Silent)</button>
+        <button class="filter-pill" data-category="air-tools">Pneumatic Tools (Impact, Grinder, Sander)</button>
+        <button class="filter-pill" data-category="cylinders">Air Cylinders (ISO, Compact)</button>
+        <button class="filter-pill" data-category="valves">Solenoid & Manual Valves</button>
+        <button class="filter-pill" data-category="air-prep">Air Prep (FRL Units)</button>
+        <button class="filter-pill" data-category="fittings">Fittings & PU Tubes</button>
+        <button class="filter-pill" data-category="accessories">Compressor Accessories</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Rendered dynamically via app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Legacy Since 2006 Section -->
+  <section class="heritage-section" id="heritage">
+    <div class="container heritage-grid">
+      <div class="heritage-visual-box">
+        <img class="heritage-main-img" src="images/air-die-grinder.jpg" alt="Neha Enterprises Precision Pneumatics & Tools Testing" />
+        <div class="heritage-floating-badge">
+          <div class="heritage-badge-icon">★</div>
+          <div class="heritage-badge-text">
+            <h4>Established in 2006</h4>
+            <p>18+ Years Serving Indian Industries</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="heritage-content">
+        <span class="section-eyebrow">Our Heritage & Commitment</span>
+        <h2>A Family Business Built on Integrity, Precision & Trust</h2>
+        <p>
+          Founded in <strong>2006</strong>, <strong>Neha Enterprises</strong> started as a dedicated brick-and-mortar pneumatics supplier serving local workshops, manufacturing units, and automation builders. Over nearly two decades of continuous service, we have built long-standing relationships with over 1,500 clients across India.
+        </p>
+        <p>
+          Today, we are taking our trusted offline expertise to the digital world. Whether you need a standard ISO cylinder, specialized high-speed directional solenoid valves, or custom stroke pneumatic actuators, our technical knowledge ensures you receive the exact component your machine demands.
+        </p>
+
+        <div class="heritage-values-grid">
+          <div class="heritage-value-card">
+            <div class="value-icon">✓</div>
+            <div class="value-text">
+              <h4>100% Genuine Components</h4>
+              <p>Each component undergoes strict dimensional & pressure leak testing.</p>
+            </div>
+          </div>
+          <div class="heritage-value-card">
+            <div class="value-icon">✓</div>
+            <div class="value-text">
+              <h4>Direct Wholesale Rates</h4>
+              <p>Unmatched value with bulk discounts for machinery manufacturers.</p>
+            </div>
+          </div>
+          <div class="heritage-value-card">
+            <div class="value-icon">✓</div>
+            <div class="value-text">
+              <h4>Custom Stroke Assembly</h4>
+              <p>Custom cylinder strokes and bore sizes built on demand.</p>
+            </div>
+          </div>
+          <div class="heritage-value-card">
+            <div class="value-icon">✓</div>
+            <div class="value-text">
+              <h4>Direct Family Support</h4>
+              <p>Speak directly to our technical founders on phone & WhatsApp.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-us-section">
+    <div class="container">
+      <div class="section-head-center">
+        <span class="section-eyebrow">The Neha Enterprises Advantage</span>
+        <h2 class="section-title">Why Industry Leaders Rely On Us</h2>
+        <p class="section-subtitle">We supply pneumatic power with speed, technical precision, and unwavering reliability.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon-box">🚀</div>
+          <h3>Same-Day Dispatch</h3>
+          <p>Over 80% of standard cylinders, valves, and fittings ship the same day across India with reliable tracking.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-box">🛡️</div>
+          <h3>Severe Duty Tested</h3>
+          <p>Our pneumatic components operate reliably from 0.5 to 10 Bar, resisting industrial wear and moisture.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-box">📞</div>
+          <h3>Direct WhatsApp Ordering</h3>
+          <p>Skip complicated checkout flows. Send your requirements straight to +91 8890034736 for instant confirmation.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-box">📑</div>
+          <h3>Official GST Billing</h3>
+          <p>Full GST tax invoices provided with every corporate order for input tax credit claims.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bulk RFQ (Request For Quotation) Section -->
+  <section class="rfq-section" id="rfq">
+    <div class="container rfq-grid">
+      <!-- Left Info -->
+      <div class="rfq-info">
+        <span class="section-eyebrow" style="color: #38bdf8;">Wholesale & Custom Orders</span>
+        <h2>Need a Custom Quote or Bulk Factory Supply?</h2>
+        <p>
+          Do you require non-standard cylinder strokes, high-flow valve banks, bulk fitting packs, or monthly OEM supply contracts? Contact our engineering team directly for priority quotes and dedicated pricing.
+        </p>
+
+        <div class="rfq-contact-cards">
+          <a href="https://wa.me/918890034736" target="_blank" class="rfq-card-link">
+            <div class="rfq-card-icon">💬</div>
+            <div class="rfq-card-text">
+              <h4>Instant WhatsApp Chat & Quote</h4>
+              <span>+91 8890034736</span>
+            </div>
+          </a>
+
+          <a href="tel:8890034736" class="rfq-card-link">
+            <div class="rfq-card-icon">📞</div>
+            <div class="rfq-card-text">
+              <h4>Call Technical Team Directly</h4>
+              <span>8890034736 (Shyam Pratap)</span>
+            </div>
+          </a>
+
+          <a href="mailto:shyampratap0589@gmail.com" class="rfq-card-link">
+            <div class="rfq-card-icon">✉️</div>
+            <div class="rfq-card-text">
+              <h4>Official Email Quotations</h4>
+              <span>shyampratap0589@gmail.com</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Form -->
+      <div class="rfq-form-card">
+        <h3>Request a Custom Quotation</h3>
+        <p>Fill out the details below. Our team will review and reply within 1 hour.</p>
+
+        <form id="rfqForm">
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="rfqName">Your Name / Company *</label>
+              <input type="text" id="rfqName" name="rfqName" required placeholder="e.g. Shyam Pratap / ABC Automation" />
+            </div>
+            <div class="form-group">
+              <label for="rfqPhone">Phone / WhatsApp Number *</label>
+              <input type="tel" id="rfqPhone" name="rfqPhone" required placeholder="e.g. 8890034736" />
+            </div>
+          </div>
+
+          <div class="form-grid-2" style="margin-top: 1rem;">
+            <div class="form-group">
+              <label for="rfqEmail">Email Address</label>
+              <input type="email" id="rfqEmail" name="rfqEmail" placeholder="e.g. name@company.com" />
+            </div>
+            <div class="form-group">
+              <label for="rfqCategory">Product Category *</label>
+              <select id="rfqCategory" name="rfqCategory" required>
+                <option value="Pneumatic Cylinders">Pneumatic Cylinders (Custom Stroke/Bore)</option>
+                <option value="Solenoid Valves">Solenoid & Directional Valves</option>
+                <option value="Air Preparation (FRL)">Air Preparation (FRL Units)</option>
+                <option value="Pneumatic Air Tools">Pneumatic Tools (Impact, Grinders)</option>
+                <option value="Push-In Fittings & PU Hose">Push-In Fittings & Tubing</option>
+                <option value="Bulk Full Plant Supply">Bulk Full Plant / OEM Supply</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-top: 1rem;">
+            <label for="rfqDetails">Requirement Specifications & Quantities *</label>
+            <textarea id="rfqDetails" name="rfqDetails" rows="4" required placeholder="e.g. Need 10 pcs SC-63x200 cylinders, 5 pcs 5/2 24V valves, and 200m 8mm PU tubing..."></textarea>
+          </div>
+
+          <button type="submit" class="rfq-submit-btn">
+            <span>Send Request on WhatsApp (Priority Response)</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-head-center">
+        <span class="section-eyebrow">Frequently Asked Questions</span>
+        <h2 class="section-title">Everything You Need to Know</h2>
+        <p class="section-subtitle">Common queries on sizing, voltage compatibility, delivery, and payments.</p>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>Can you manufacture or supply custom stroke length cylinders?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes, absolutely! Since 2006, our workshop specializes in custom bore and stroke cylinders (from 15mm stroke up to 1500mm stroke in SC, MAL, and compact series). Contact us on <strong>8890034736</strong> with your exact dimensions.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What coil voltages are available for your solenoid valves?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Our 5/2, 5/3, and 3/2 solenoid valves come in <strong>24V DC</strong> (most common for PLC automation), <strong>220V AC</strong>, <strong>110V AC</strong>, and <strong>12V DC</strong> with DIN IP65 plug connectors.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does the "Order on WhatsApp" or "Buy Now" work?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              When you click "Buy Now" or "Order on WhatsApp", your chosen products, model numbers, and quantities are automatically formatted into a WhatsApp message sent straight to our team at <strong>8890034736</strong>. We confirm payment, prepare your GST invoice, and ship immediately.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Do you provide GST tax invoices for business input credit?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes, all shipments come with an official GST Tax Invoice containing your company name and GSTIN number, allowing you to easily claim 18% Input Tax Credit (ITC).
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How fast is delivery across India?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Standard stock items are dispatched within 24 hours via reliable couriers and transport cargo. Typical transit time is 2-4 business days depending on your industrial zone.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1 -->
+        <div class="footer-col">
+          <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem;">
+            <div class="brand-icon-box" style="width: 36px; height: 36px;">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <span style="font-size: 1.25rem; font-weight: 800; color: white;">NEHA ENTERPRISES</span>
+          </div>
+          <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem; color: #94a3b8;">
+            Premier suppliers of industrial pneumatics, cylinders, solenoid valves, FRL air treatment systems, and high performance pneumatic tools. Serving since <strong>2006</strong>.
+          </p>
+          <div style="display: inline-block; background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); padding: 0.3rem 0.75rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 700;">
+            18+ Years Family Legacy
+          </div>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="footer-col">
+          <h4>Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#catalog">Products Catalog</a></li>
+            <li><a href="#categories">Product Categories</a></li>
+            <li><a href="#heritage">Serving Since 2006</a></li>
+            <li><a href="#rfq">Request Bulk Quote</a></li>
+            <li><a href="#faq">Technical FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="footer-col">
+          <h4>Pneumatic Products</h4>
+          <ul class="footer-links">
+            <li><a href="#catalog" onclick="setCategory('cylinders')">Air Cylinders (SC, CQ2, MAL)</a></li>
+            <li><a href="#catalog" onclick="setCategory('valves')">Solenoid Valves (5/2, 5/3)</a></li>
+            <li><a href="#catalog" onclick="setCategory('air-prep')">FRL Filter Regulators</a></li>
+            <li><a href="#catalog" onclick="setCategory('air-tools')">Pneumatic Impact Wrenches</a></li>
+            <li><a href="#catalog" onclick="setCategory('fittings')">One-Touch Push-In Fittings</a></li>
+            <li><a href="#catalog" onclick="setCategory('accessories')">Bronze Silencers & Gauges</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4 -->
+        <div class="footer-col">
+          <h4>Direct Contact & Orders</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <div>
+                <strong>Phone / WhatsApp:</strong><br />
+                <a href="tel:8890034736" style="color: #38bdf8; font-weight: 700;">+91 8890034736</a>
+              </div>
+            </div>
+
+            <div class="footer-contact-item">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <div>
+                <strong>Email Address:</strong><br />
+                <a href="mailto:shyampratap0589@gmail.com" style="color: #38bdf8;">shyampratap0589@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="footer-contact-item">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <div>
+                <strong>Working Hours:</strong><br />
+                Mon - Sat: 9:00 AM - 8:00 PM IST
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2006 - 2026 <strong>Neha Enterprises</strong>. All rights reserved. Industrial Pneumatics & Precision Air Tools.
+        </div>
+        <div>
+          Engineered for continuous industrial duty across India.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action Button -->
+  <a href="https://wa.me/918890034736?text=Hello%20Neha%20Enterprises,%20I%20am%20interested%20in%20your%20pneumatic%20products." target="_blank" class="floating-whatsapp" title="Chat on WhatsApp (8890034736)">
+    <svg fill="currentColor" viewBox="0 0 24 24">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+    </svg>
+  </a>
+
+  <!-- ==========================================================================
+       MODALS & DRAWERS
+       ========================================================================== -->
+
+  <!-- Product Details Modal -->
+  <div class="modal-backdrop" id="productModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Modal">&times;</button>
+      
+      <div class="modal-body">
+        <!-- Gallery Column -->
+        <div class="modal-gallery-col">
+          <div class="modal-main-image">
+            <img id="modalMainImg" src="" alt="Product Detail" />
+          </div>
+          <div class="modal-thumbnails" id="modalThumbnails"></div>
+        </div>
+
+        <!-- Info Column -->
+        <div class="modal-info-col">
+          <div class="modal-badge-row">
+            <span class="modal-cat-tag" id="modalCatTag">Pneumatic Cylinders</span>
+            <span class="modal-stock-badge" id="modalStockBadge">In Stock</span>
+          </div>
+
+          <h2 class="modal-title" id="modalTitle">Product Title</h2>
+          
+          <div class="modal-sku-bar">
+            <span id="modalSku">SKU: ---</span>
+            <div id="modalRating" style="display: flex; align-items: center;"></div>
+          </div>
+
+          <div class="modal-pricing-box">
+            <div class="modal-price-row">
+              <span class="modal-price-current" id="modalPriceCurrent">₹0</span>
+              <span class="modal-price-original" id="modalPriceOriginal">₹0</span>
+            </div>
+            <div class="modal-price-note">✓ GST Invoice Available • Pan-India Courier • Bulk Discounts Available</div>
+          </div>
+
+          <!-- Interactive Size / Variant / Fitting Selector -->
+          <div class="modal-variants-section" id="modalVariantsSection" style="display: none;">
+            <div class="variant-label" id="modalVariantLabel">
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+              <span id="modalVariantTitle">Select Available Size / Fitting / Voltage:</span>
+            </div>
+            <div class="variant-chips" id="modalVariantChips"></div>
+          </div>
+
+          <p class="modal-desc" id="modalDesc"></p>
+
+          <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; color: #0f172a;">Key Advantages:</h4>
+          <ul class="modal-features-list" id="modalFeaturesList"></ul>
+
+          <!-- Action Box -->
+          <div class="modal-action-box">
+            <div class="quantity-row">
+              <span style="font-size: 0.85rem; font-weight: 700; color: #0f172a;">Quantity:</span>
+              <div class="qty-control">
+                <button class="qty-btn" id="modalQtyMinus">-</button>
+                <input type="text" class="qty-input" id="modalQtyInput" value="1" />
+                <button class="qty-btn" id="modalQtyPlus">+</button>
+              </div>
+            </div>
+
+            <div class="modal-buttons-grid">
+              <button class="btn-modal-cart" id="modalAddToCartBtn">
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                <span>Add to Cart</span>
+              </button>
+
+              <button class="btn-modal-buynow" id="modalBuyNowBtn">
+                <span>⚡ Buy Now</span>
+              </button>
+
+              <button class="btn-modal-whatsapp" id="modalWhatsAppBtn">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>Order Directly on WhatsApp (8890034736)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Specifications Table -->
+        <div class="modal-specs-section">
+          <h4>Engineering Technical Data & Parameters</h4>
+          <table class="specs-table">
+            <tbody id="modalSpecsBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Slide-Out Drawer -->
+  <div class="cart-drawer-backdrop" id="cartDrawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3>
+        <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+        <span>Your Industrial Cart</span>
+      </h3>
+      <button class="cart-close-btn" id="cartCloseBtn">&times;</button>
+    </div>
+
+    <div class="cart-drawer-items" id="cartDrawerItems">
+      <!-- Items dynamically populated -->
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">₹0</strong>
+      </div>
+      <div class="cart-total-row">
+        <span>Total Payable</span>
+        <span id="cartTotal" style="color: #0284c7;">₹0</span>
+      </div>
+
+      <div class="cart-checkout-actions">
+        <button class="btn-cart-whatsapp" id="cartWhatsAppCheckoutBtn">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          <span>Order via WhatsApp (8890034736)</span>
+        </button>
+
+        <button class="btn-cart-checkout" id="cartCheckoutBtn">
+          <span>Proceed to Order Details Form</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Checkout & Shipping Modal -->
+  <div class="modal-backdrop" id="checkoutModal">
+    <div class="modal-container checkout-modal-container">
+      <button class="modal-close-btn" id="checkoutCloseBtn">&times;</button>
+      
+      <div style="padding: 2.25rem;">
+        <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 0.25rem;">Place Industrial Order</h2>
+        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.5rem;">Enter your delivery and billing details to generate an official Proforma Invoice.</p>
+
+        <!-- Summary -->
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1rem; margin-bottom: 1.5rem;">
+          <h4 style="font-size: 0.85rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem;">Order Summary:</h4>
+          <div id="checkoutSummaryList"></div>
+          <div style="display: flex; justify-content: space-between; font-weight: 800; margin-top: 0.75rem; padding-top: 0.5rem; border-top: 2px solid #cbd5e1;">
+            <span>Grand Total:</span>
+            <span id="checkoutGrandTotal" style="color: #0284c7; font-size: 1.15rem;">₹0</span>
+          </div>
+        </div>
+
+        <form id="checkoutForm" class="checkout-form">
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="customerName">Full Name / Contact Person *</label>
+              <input type="text" id="customerName" name="customerName" required placeholder="e.g. Shyam Pratap" />
+            </div>
+            <div class="form-group">
+              <label for="customerPhone">Phone / WhatsApp Number *</label>
+              <input type="tel" id="customerPhone" name="customerPhone" required placeholder="e.g. 8890034736" />
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="customerEmail">Email Address</label>
+              <input type="email" id="customerEmail" name="customerEmail" placeholder="shyampratap0589@gmail.com" />
+            </div>
+            <div class="form-group">
+              <label for="customerGstin">GSTIN Number (Optional)</label>
+              <input type="text" id="customerGstin" name="customerGstin" placeholder="For GST Input Tax Credit" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="customerAddress">Factory / Delivery Address *</label>
+            <input type="text" id="customerAddress" name="customerAddress" required placeholder="Plot No., Industrial Area, Street..." />
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="customerCity">City *</label>
+              <input type="text" id="customerCity" name="customerCity" required placeholder="City name" />
+            </div>
+            <div class="form-group">
+              <label for="customerState">State *</label>
+              <input type="text" id="customerState" name="customerState" required placeholder="State name" />
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="customerPincode">Pin Code *</label>
+              <input type="text" id="customerPincode" name="customerPincode" required placeholder="6-digit PIN" />
+            </div>
+            <div class="form-group">
+              <label for="paymentMethod">Payment Method Preference *</label>
+              <select id="paymentMethod" name="paymentMethod" required>
+                <option value="Direct Bank Transfer / NEFT / RTGS">Direct Bank Transfer / NEFT / RTGS</option>
+                <option value="UPI / QR Code Transfer">UPI / QR Code Transfer</option>
+                <option value="Cash On Delivery (COD) / Transport Pay">Cash On Delivery / Transport Pay</option>
+                <option value="WhatsApp Confirmation">Confirm on WhatsApp (+91 8890034736)</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary" style="margin-top: 1rem; width: 100%; justify-content: center;">
+            <span>Confirm Order & View Proforma Invoice</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Official Proforma Invoice Modal -->
+  <div class="modal-backdrop" id="invoiceModal">
+    <div class="modal-container" style="max-width: 780px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; background: #0f172a; color: white; border-top-left-radius: 16px; border-top-right-radius: 16px;">
+        <span style="font-weight: 700; font-size: 0.95rem;">Order Confirmation & Invoice</span>
+        <div style="display: flex; gap: 0.5rem;">
+          <button id="invoicePrintBtn" class="btn-outline-white" style="padding: 0.35rem 0.8rem; font-size: 0.8rem;">
+            🖨️ Print / Save PDF
+          </button>
+          <button id="invoiceCloseBtn" style="color: white; font-size: 1.4rem; padding: 0 0.5rem;">&times;</button>
+        </div>
+      </div>
+      <div id="invoiceContent"></div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
